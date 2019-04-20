@@ -6,7 +6,8 @@ class SmurfForm extends React.Component {
   state = {
     name: '',
     age: '',
-    height: ''
+    height: '',
+    id: Date.now()
   }
 
   handleInputChange = event => {
@@ -14,9 +15,9 @@ class SmurfForm extends React.Component {
   }
 
   handleAddSmurf = event => {
-    const { name, age, height } = this.state;
-    this.props.addSmurf({name, age, height});
-    this.setState({name: '', age: '', height: ''})
+    const { name, age, height, id } = this.state;
+    this.props.addSmurf({name, age, height, id});
+    this.setState({name: '', age: '', height: '', id: Date.now()})
   }
 
   render() {

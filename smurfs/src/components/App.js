@@ -30,10 +30,11 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
+  const { smurfReducer } = state;
   return {
-    smurfs: state.smurfs,
-    error: state.error,
-    fetching: state.fetching
+    smurfs: smurfReducer.smurfs,
+    error: smurfReducer.error,
+    fetching: smurfReducer.fetching
   }
 }
 
